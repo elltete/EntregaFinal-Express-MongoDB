@@ -1,5 +1,7 @@
 import express from 'express';
+import { seriesRoutes } from "./src/routes/serieRoutes.js";
 import { connectdb } from './src/config/mongo.js';
+import cors from 'cors'
 
 process.loadEnvFile();
 const PORT = process.env.PORT;
@@ -7,6 +9,10 @@ const PORT = process.env.PORT;
 const app = express(); 
 
 app.use(express.json());
+
+app.use(cors());
+
+app.use('/api/series', seriesRoutes );
 
 app.listen(PORT, () => {
     connectdb();
