@@ -7,8 +7,8 @@ Requisitos:
 1. Configuración de la Base de Datos:
     - Conectar la API a una base de datos MongoDB.
     - La base de datos debe contener una colección para almacenar los usuarios, con los siguientes campos:
-        ■ username: String único.
-        ■ password: String (debe ser hasheada antes de guardarse en la base
+        * username: String único.
+        * password: String (debe ser hasheada antes de guardarse en la base
 de datos).
 
 2. Autenticación con JWT:
@@ -19,11 +19,11 @@ de datos).
 
 3. Operaciones CRUD:
     - Implementar las siguientes rutas para la entidad que el alumno elija administrar:
-        ■ POST /api/[recurso]: Crear un nuevo recurso.
-        ■ GET /api/[recurso]: Obtener todos los recursos.
-        ■ OPCIONAL: GET /api/[recurso]/:id: Obtener un recurso específico por ID.
-        ■ PUT /api/[recurso]/:id: Actualizar un recurso por ID.
-        ■ DELETE /api/[recurso]/:id: Eliminar un recurso por ID.
+        * POST /api/[recurso]: Crear un nuevo recurso.
+        * GET /api/[recurso]: Obtener todos los recursos.
+        * OPCIONAL: GET /api/[recurso]/:id: Obtener un recurso específico por ID.
+        * PUT /api/[recurso]/:id: Actualizar un recurso por ID.
+        * DELETE /api/[recurso]/:id: Eliminar un recurso por ID.
 
 4. Variables de Entorno:
     - Utilizar variables de entorno para almacenar información sensible, como la clave secreta para la firma de los JWT y las credenciales de la base de datos MongoDB.
@@ -45,9 +45,9 @@ de datos).
     - OPCIONAL: Documentar la API utilizando herramientas como Swagger o Postman, especificando los puntos finales, métodos, parámetros y ejemplos de respuestas.
 
 Evaluación:
-    ● La correcta implementación de las operaciones CRUD.
-    ● El uso adecuado de JWT para la autenticación de usuarios.
-    ● La protección de rutas con middleware de autenticación.
-    ● El uso adecuado de variables de entorno para configuraciones sensibles.
-    ● La validación y manejo de errores de las entradas de los usuarios.
-    ● La seguridad de la API y su documentación.
+    - La correcta implementación de las operaciones CRUD.
+    - El uso adecuado de JWT para la autenticación de usuarios.
+    - La protección de rutas con middleware de autenticación.
+    - El uso adecuado de variables de entorno para configuraciones sensibles.
+    - La validación y manejo de errores de las entradas de los usuarios.
+    - La seguridad de la API y su documentación.

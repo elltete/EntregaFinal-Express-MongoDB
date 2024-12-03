@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Entrega Final - UTN Diplomatura en Programación Web Full Stack - Express & MongoDB",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "node --watch index.js"
   },
