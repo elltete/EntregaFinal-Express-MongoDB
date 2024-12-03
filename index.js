@@ -2,6 +2,7 @@ import express from 'express';
 import { seriesRoutes } from "./src/routes/serieRoutes.js";
 import { connectdb } from './src/config/mongo.js';
 import { authRoutes } from './src/routes/authRoutes.js';
+import { auth } from './src/middleware/authMiddleware.js'
 import cors from 'cors'
 
 process.loadEnvFile();
@@ -15,9 +16,12 @@ app.use(cors());
 
 app.use('/api/auth', authRoutes );
 
-app.use('/api/series', seriesRoutes );
+app.use('/api/series', auth, seriesRoutes );
 
 app.listen(PORT, () => {
     connectdb();
     console.log("Server activo en http://localhost:" + PORT);
 })
+
+
+// Validar cuando intenta generar un usuario existente 
