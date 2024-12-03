@@ -1,0 +1,26 @@
+{
+  "name": "entregafinal-express-mongodb",
+  "version": "1.0.0",
+  "description": "Entrega Final - UTN Diplomatura en Programación Web Full Stack - Express & MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elltete/EntregaFinal-Express-MongoDB.git"
+  },
+  "author": "Diego Ponzo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elltete/EntregaFinal-Express-MongoDB/issues"
+  },
+  "homepage": "https://github.com/elltete/EntregaFinal-Express-MongoDB#readme",
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "cors": "2.8.5",
+    "express": "4.21.1",
+    "jsonwebtoken": "9.0.2",
+    "mongoose": "8.8.3"
+  }
+}
