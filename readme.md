@@ -7,20 +7,27 @@ Tambien permite la creacion de usuarios y logueo.
 
 Los datos se persisten una una base de datos MongoDB, la cual se encuentra en la nube (**se compartira por separado los datos del cluster, usuaurio y nombre de la base de datos**).
 
+## Middlewares
+
+    - Routers
+    - Autenticacion
+    - Cors
+    - Helmet
+
 ## Link repositorio GitHub: 
     ```
         https://github.com/elltete/EntregaFinal-Express-MongoDB.git
     ```
 
 ## Documentacion en Postman:
-   ```
+    ```
        https://documenter.getpostman.com/view/20059865/2sAYBYhB1Y
-   ```
+    ```
 
 ## Deploy del backned:
     ```
        https://www.render.com
-   ```
+    ```
 
 
 ## Endpoints:
@@ -37,6 +44,7 @@ Los datos se persisten una una base de datos MongoDB, la cual se encuentra en la
 
    -  `POST /api/auth/register`: Registro de un nuevo usuario.
    -  `POST /api/auth/login`: Login de un usuario. 
+
 
 
 ### Consigna TP Final - Desarrollo de API con Express y MongoDB
