@@ -1,4 +1,44 @@
 
+## SERIES API
+
+Servicio WEB que permite acceder a informacion sobre Series de televivion.
+La aplicacion permite consultar todas las series disponibles en la base de datos, acceder a una serie especifica segun su ID, crear una nueva serie, actualizar sus datos y eliminar una serie especifica. Todas las operaciones esta autenticas, solo usuarios logueados y autenticados pueden ejecutarlas.
+Tambien permite la creacion de usuarios y logueo.
+
+Los datos se persisten una una base de datos MongoDB, la cual se encuentra en la nube (**se compartira por separado los datos del cluster, usuaurio y nombre de la base de datos**).
+
+## Link repositorio GitHub: 
+    ```
+        https://github.com/elltete/EntregaFinal-Express-MongoDB.git
+    ```
+
+## Documentacion en Postman:
+   ```
+       https://documenter.getpostman.com/view/20059865/2sAYBYhB1Y
+   ```
+
+## Deploy del backned:
+    ```
+       https://www.render.com
+   ```
+
+
+## Endpoints:
+
+-  **Series**
+
+   -  `GET /api/series`: Lista todas las series.
+   -  `GET /api/series/:id`: lista una serie segun su ID.
+   -  `POST /api/series`: Crea una nueva serie.
+   -  `PATCH /api/series/:id`: Actualizar una serie existente.
+   -  `DELETE /api/series/:id`: Eliminar un presupuesto.   
+
+-  **Usuarios**
+
+   -  `POST /api/auth/register`: Registro de un nuevo usuario.
+   -  `POST /api/auth/login`: Login de un usuario. 
+
+
 ### Consigna TP Final - Desarrollo de API con Express y MongoDB
 
 Objetivo: Desarrollar una API RESTful utilizando Express con conexión a una base de datos MongoDB. La API debe permitir la gestión de una entidad elegida por cada alumno, con las operaciones básicas de CRUD (Crear, Leer, Actualizar, Eliminar), autenticación de usuarios mediante JWT, y validación de datos.

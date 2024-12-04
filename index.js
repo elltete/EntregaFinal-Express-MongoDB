@@ -24,4 +24,6 @@ app.listen(PORT, () => {
 })
 
 
-// Validar cuando intenta generar un usuario existente 
+// joi o express-validator
+// helmet
+// middleware manejo de errores

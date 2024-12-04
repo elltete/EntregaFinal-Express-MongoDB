@@ -33,7 +33,7 @@ const getAllSeries = async () => {
     const serie = await Serie.find();
     return serie;
   } catch (error) {
-    throw new Error("Error al obtener series");
+    throw new Error("Error getting series");
   }
 };
 
@@ -42,7 +42,7 @@ const getSeriebyId = async (id) => {
     const serie = await Serie.findById(id);
     return serie;
   } catch (error) {
-    throw new Error("Error al obtener la serie");
+    throw new Error("Error getting a serie");
   }
 };
 
@@ -51,7 +51,7 @@ const deleteSerie = async (id) => {
     const serie = await Serie.findByIdAndDelete(id);
     return serie;
   } catch (error) {
-    throw new Error("Error al eliminar la serie");
+    throw new Error("Error deleting serie");
   }
 };
 
@@ -61,7 +61,7 @@ const createSerie = async (dataSerie) => {
     newSerie.save();
     return newSerie;
   } catch (error) {
-    throw new Error("Error al crear la serie");
+    throw new Error("Error creating a serie");
   }
 };
 
@@ -70,7 +70,7 @@ const updateSerie = async (id, updateSerie) => {
     const serie = await Serie.findByIdAndUpdate(id, updateSerie);
     return serie;
   } catch (error) {
-    throw new Error("Error al modificar la serie");
+    throw new Error("Error updating a serie");
   }
 };
 
