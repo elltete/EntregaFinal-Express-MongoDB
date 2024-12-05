@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import bcryptjs from "bcryptjs";
 import jwt from "jsonwebtoken";
+import Joi from "joi"
 
 process.loadEnvFile();
 const JWT_SECRET = process.env.JWT_SECRET;
@@ -25,9 +26,22 @@ const userSchema = new mongoose.Schema(
 
 const User = mongoose.model("users", userSchema);
 
+const validateUser = (user) => {
+  const schema = Joi.object({
+    username: Joi.string().alphanum().min(5).max(10).required(),
+    password: Joi.string().min(8).max(20).required(),    //.pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')),
+  })
+  return schema.validate(user)
+}
+
 const register = async (dataUser) => {
   try {
     const { username, password } = dataUser;
+
+    const data = validateUser(dataUser);
+    if (data.error) {
+      res.status(400).json({ error: "Error in data entry" });
+    }
 
     const existingUser = await User.findOne({ username });
     if (existingUser) {

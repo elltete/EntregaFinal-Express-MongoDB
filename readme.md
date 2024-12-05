@@ -5,14 +5,23 @@ Servicio WEB que permite acceder a informacion sobre Series de televivion.
 La aplicacion permite consultar todas las series disponibles en la base de datos, acceder a una serie especifica segun su ID, crear una nueva serie, actualizar sus datos y eliminar una serie especifica. Todas las operaciones esta autenticas, solo usuarios logueados y autenticados pueden ejecutarlas.
 Tambien permite la creacion de usuarios y logueo.
 
-Los datos se persisten una una base de datos MongoDB, la cual se encuentra en la nube (**se compartira por separado los datos del cluster, usuaurio y nombre de la base de datos**).
+Los datos se persisten una una base de datos MongoDB, la cual se encuentra en la nube (**se compartira por separado los datos del cluster, usuario y nombre de la base de datos**).
 
 ## Middlewares
 
     - Routers
-    - Autenticacion
-    - Cors
-    - Helmet
+    - Autenticacion: proceso de verificacion de usuarios
+
+## Librerias
+
+    - Express: 
+    - Bcryptjs: 
+    - Cors: mecanismo de seguridad que permite a los navegadores web interactuar con recursos de otros dominios
+    - Helmet: proteccion de la API de vulnerabilidades web en encabezados HTTP
+    - Joi: validación de datos antes de ser persistidos en la base de datos
+        user.Username: string() min(5) max(10) required()
+        user.Password: string() min(8) max(20) required()
+        serie.
 
 ## Link repositorio GitHub: 
     ```

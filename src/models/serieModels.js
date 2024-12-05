@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import Joi from "joi"
 
 const serieSchema = new mongoose.Schema(
   {
@@ -54,8 +55,26 @@ const deleteSerie = async (id) => {
   }
 };
 
+const validateSerie = (serie) => {
+  let year = new Date().getFullYear();
+
+  const schema = Joi.object({
+    title: Joi.string().min(3).max(50).required(),
+    genre: Joi.array().items(Joi.string().min(3).max(10).required()).required(),
+    year: Joi.number().integer().min(1900).max(year).required(),
+    seasons: Joi.number().integer().min(1).max(40).required(),
+    rating: Joi.number().min(0).max(10).required(),
+  })
+  return schema.validate(serie)
+}
+
 const createSerie = async (dataSerie) => {
   try {
+    const data = validateSerie(dataSerie);
+    if (data.error) {
+      res.status(400).json({ error: "Error in data entry" });
+    }
+    
     const newSerie = new Serie(dataSerie);
     newSerie.save();
     return newSerie;

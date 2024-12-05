@@ -3,9 +3,6 @@ import UserModel from "../models/userModels.js";
 const register = async (req, res) => {
   try {
     const { username, password } = req.body;
-    if (!username || !password) {
-      return res.status(400).json({ error: "Bad Request" });
-    }
     
     const newUser = await UserModel.register({ username, password });
 

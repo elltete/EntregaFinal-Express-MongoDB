@@ -36,8 +36,6 @@ const deleteSerie = async (req, res) => {
 const createSerie = async (req, res) => {
   try {
     const { title, genre, year, seasons, rating } = req.body;
-    if (!title || !genre || !year || !seasons || !rating)
-      return res.status(404).json({ message: "Bad request" });
 
     const newSerie = await SeriesModel.createSerie({
       title,
