@@ -12,10 +12,12 @@ Los datos se persisten una una base de datos MongoDB, la cual se encuentra en la
     - Routers
     - Autenticacion: proceso de verificacion de usuarios
 
-## Librerias
+## Librerias utilizadas
 
-    - Express: 
-    - Bcryptjs: 
+    - Express: Framework web
+    - Bcryptjs: Algoritmo de hash que se usa para almacenar y codificar contraseñas
+    - Mongoose: Permite interactuar con una base de datos MongoDB
+    - Jsonwebtoken: permite transmitir de forma segura información, creacion de token
     - Cors: mecanismo de seguridad que permite a los navegadores web interactuar con recursos de otros dominios
     - Helmet: proteccion de la API de vulnerabilidades web en encabezados HTTP
     - Joi: validación de datos antes de ser persistidos en la base de datos
@@ -35,11 +37,6 @@ Los datos se persisten una una base de datos MongoDB, la cual se encuentra en la
 ## Documentacion en Postman:
     ```
        https://documenter.getpostman.com/view/20059865/2sAYBYhB1Y
-    ```
-
-## Deploy del backned:
-    ```
-       https://www.render.com
     ```
 
 
