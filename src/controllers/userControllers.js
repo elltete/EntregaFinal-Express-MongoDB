@@ -1,4 +1,4 @@
-import AuthModel from "../models/authModels.js";
+import UserModel from "../models/userModels.js";
 
 const register = async (req, res) => {
   try {
@@ -7,7 +7,7 @@ const register = async (req, res) => {
       return res.status(400).json({ error: "Bad Request" });
     }
     
-    const newUser = await AuthModel.register({ username, password });
+    const newUser = await UserModel.register({ username, password });
 
     if (!newUser) {
       return res.status(400).json({ error: "user already exists" });
@@ -27,7 +27,7 @@ const login = async (req, res) => {
         return res.status(400).json({ message: "Username and password are required" });
       }
   
-      const token = await AuthModel.login({ username, password });
+      const token = await UserModel.login({ username, password });
   
       if (!token) {
         return res.status(401).json({ message: "Invalid username or password" });

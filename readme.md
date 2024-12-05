@@ -42,8 +42,8 @@ Los datos se persisten una una base de datos MongoDB, la cual se encuentra en la
 
 -  **Usuarios**
 
-   -  `POST /api/auth/register`: Registro de un nuevo usuario.
-   -  `POST /api/auth/login`: Login de un usuario. 
+   -  `POST /api/user/register`: Registro de un nuevo usuario.
+   -  `POST /api/user/login`: Login de un usuario. 
 
 
 

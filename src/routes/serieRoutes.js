@@ -1,15 +1,15 @@
 import { Router } from "express";
 import serieController from '../controllers/serieControllers.js';
 
-const seriesRoutes = Router();
+const serieRoutes = Router();
 
-seriesRoutes.route('/')
+serieRoutes.route('/')
     .get(serieController.getAllSeries)
     .post(serieController.createSerie);
 
-seriesRoutes.route('/:id')
+serieRoutes.route('/:id')
   .get(serieController.getSeriebyId)
   .patch(serieController.updateSerie)
   .delete(serieController.deleteSerie);
 
-export { seriesRoutes }
+export { serieRoutes }

@@ -1,7 +1,7 @@
 import express from 'express';
-import { seriesRoutes } from "./src/routes/serieRoutes.js";
+import { serieRoutes } from "./src/routes/serieRoutes.js";
 import { connectdb } from './src/config/mongo.js';
-import { authRoutes } from './src/routes/authRoutes.js';
+import { userRoutes } from './src/routes/userRoutes.js';
 import { auth } from './src/middleware/authMiddleware.js'
 import helmet from 'helmet';
 import cors from 'cors'
@@ -17,9 +17,9 @@ app.use(helmet());
 
 app.use(cors());
 
-app.use('/api/auth', authRoutes );
+app.use('/api/user', userRoutes );
 
-app.use('/api/series', auth, seriesRoutes );
+app.use('/api/series', auth, serieRoutes );
 
 app.listen(PORT, () => {
     connectdb();
