@@ -45,6 +45,10 @@ const createSerie = async (req, res) => {
       rating,
     });
     
+    if (newSerie === 1) {
+      return res.status(400).json({ error: "Error in data entry" });
+    }
+
     res.status(201).json(newSerie);
   } catch (error) {
     res.status(500).json({ message: "Error internal server" });

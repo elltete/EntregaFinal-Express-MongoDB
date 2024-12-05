@@ -72,7 +72,7 @@ const createSerie = async (dataSerie) => {
   try {
     const data = validateSerie(dataSerie);
     if (data.error) {
-      res.status(400).json({ error: "Error in data entry" });
+      return 1;
     }
     
     const newSerie = new Serie(dataSerie);

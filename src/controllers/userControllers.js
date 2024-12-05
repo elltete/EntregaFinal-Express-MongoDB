@@ -10,6 +10,10 @@ const register = async (req, res) => {
       return res.status(400).json({ error: "user already exists" });
     }
 
+    if (newUser === 1) {
+      return res.status(400).json({ error: "Error in data entry" });
+    }
+
     res.status(201).json(newUser);
   } catch (error) {
     res.status(500).json({ message: "Error internal server" });

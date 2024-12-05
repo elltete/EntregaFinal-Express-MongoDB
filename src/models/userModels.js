@@ -29,7 +29,7 @@ const User = mongoose.model("users", userSchema);
 const validateUser = (user) => {
   const schema = Joi.object({
     username: Joi.string().alphanum().min(5).max(10).required(),
-    password: Joi.string().min(8).max(20).required(),    //.pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')),
+    password: Joi.string().min(8).max(20).required(),
   })
   return schema.validate(user)
 }
@@ -40,7 +40,7 @@ const register = async (dataUser) => {
 
     const data = validateUser(dataUser);
     if (data.error) {
-      res.status(400).json({ error: "Error in data entry" });
+      return 1;
     }
 
     const existingUser = await User.findOne({ username });
