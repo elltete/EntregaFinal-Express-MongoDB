@@ -25,7 +25,3 @@ app.listen(PORT, () => {
     connectdb();
     console.log("Server activo en http://localhost:" + PORT);
 })
-
-
-// joi o express-validator
-// middleware manejo de errores

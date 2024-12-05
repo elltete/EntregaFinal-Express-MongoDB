@@ -19,9 +19,13 @@ Los datos se persisten una una base de datos MongoDB, la cual se encuentra en la
     - Cors: mecanismo de seguridad que permite a los navegadores web interactuar con recursos de otros dominios
     - Helmet: proteccion de la API de vulnerabilidades web en encabezados HTTP
     - Joi: validación de datos antes de ser persistidos en la base de datos
-        user.Username: string() min(5) max(10) required()
+        user.Username: string() alphanum() min(5) max(10) required()
         user.Password: string() min(8) max(20) required()
-        serie.
+        serie.title: string() min(3) max(50) required(),
+        serie.genre: array() items(string() min(3) max(10) required()) required(),
+        serie.year: number() integer() min(1900) max(actualYear) required(),
+        serie.seasons: number() integer() min(1) max(40) required(),
+        serie.rating: number() min(0) max(10) required(),
 
 ## Link repositorio GitHub: 
     ```
